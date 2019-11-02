@@ -1,11 +1,14 @@
 ## [ .gitignore ]
 
 ## Liste des fichiers et dossiers à ignorer
+creds.py
+creds.h
 
 #.gitignore
 
 ## [ Dossiers a ignorer ]
-_3_software/_3-1_test*/
+_3_software\dev_Python\_3-1_test
+_3_software/dev_CPP/3-3_test
 _3_software/oldLibVers*/
 _5_*/
 _6_*/

@@ -93,8 +93,8 @@ LED = C_Led()
 
 
 # Définission de la broche du servo moteur
-# GPIO 5 = D1 sur le NodeMcu
-# SERVO = Pin(5, Pin.OUT)
+# GPIO 14 = D1 sur le NodeMcu
+# SERVO = Pin(14, Pin.OUT)
 
 # Définission de la broche de l'anneau de LED NeoPixel
 # GPIO 0 = D3 sur le NodeMCU
