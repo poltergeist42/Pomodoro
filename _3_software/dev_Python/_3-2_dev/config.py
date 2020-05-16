@@ -11,7 +11,7 @@ Infos
     :dépôt GitHub:       
     :documentation:      
     :Autheur:            `Poltergeist42 <https://github.com/poltergeist42>`_
-    :Version:            190522
+    :Version:            200119
 
 ####
 
@@ -92,9 +92,9 @@ LED = C_Led()
 # SDA = Pin(4)
 
 
-# Définission de la broche du servo moteur
-# GPIO 14 = D1 sur le NodeMcu
-# SERVO = Pin(14, Pin.OUT)
+# Définission de la broche du solenoide
+# GPIO 4 = D2 sur le NodeMcu
+SOLENOIDE = Pin(4, Pin.OUT)
 
 # Définission de la broche de l'anneau de LED NeoPixel
 # GPIO 0 = D3 sur le NodeMCU

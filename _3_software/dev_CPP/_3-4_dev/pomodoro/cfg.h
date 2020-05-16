@@ -1,6 +1,7 @@
 // Définission de la broche de l'anneau de LED NeoPixel
 // GPIO 0 = D3 sur le NodeMCU
 #define NEOPIX 0
+#define NEOPIX_NUMPIXELS 12
 
 // LED intégrée au NodeMCU
 #define LED 2

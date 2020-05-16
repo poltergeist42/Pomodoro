@@ -1,6 +1,6 @@
-# Utilisation de la bibliothèque neopixel avec Feather ESP8266 sous MicroPython
+# Utilisation de la biblioth猫que neopixel avec Feather ESP8266 sous MicroPython
 # 
-# Differente fonctions permettant de réaliser des animations lumineuses.
+# Differente fonctions permettant de r茅aliser des animations lumineuses.
 # Certains exemples transcript de http://moving-rainbow.readthedocs.io/en/latest/README/ 
 #
 # Shop: https://shop.mchobby.be/55-leds-neopixels-et-dotstar
