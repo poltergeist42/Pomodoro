@@ -5,9 +5,9 @@ Informations générales Pomodoro
 :Auteur:               Poltergeist42
 :Site_Web:             https://github.com/poltergeist42
 :Projet:               Pomodoro
-:Version:              
-:dépôt GitHub:         
-:documentation:        
+:Version:              200516
+:dépôt GitHub:         https://github.com/poltergeist42/Pomodoro
+:documentation:        https://poltergeist42.github.io/Pomodoro/
 :Licence:              CC BY-NC-SA 4.0
 :Liens:                https://creativecommons.org/licenses/by-nc-sa/4.0/
 
