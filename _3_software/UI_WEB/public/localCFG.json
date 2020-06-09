@@ -1,0 +1,14 @@
+{
+    "common":{
+        "currentMode": "lampe",
+        "localUrl": "localhost",
+        "port": 3000,
+        "remoteUrl": ""
+    },
+    "lampe":{
+        "rdLampe": "fade",
+        "intesity": "75",
+        "speed": "25"
+    },
+    "pomodoro":{}
+}
