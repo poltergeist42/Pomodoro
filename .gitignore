@@ -7,9 +7,13 @@ creds.h
 #.gitignore
 
 ## [ Dossiers a ignorer ]
-_3_software\dev_Python\_3-1_test
+_3_software/dev_Python/_3-1_test
 _3_software/dev_CPP/3-3_test
 _3_software/oldLibVers*/
+/node_modules
+/.pnp
+.pnp.js
+
 _5_*/
 _6_*/
 _7_*/
@@ -47,6 +51,18 @@ __pycache__
 *.sql
 *.sqlite
 
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+
 ## OS generated files
 .DS_Store
 ehthumbs.db
@@ -57,3 +73,11 @@ Thumbs.db
 *~
 *.lock
 *.out
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
