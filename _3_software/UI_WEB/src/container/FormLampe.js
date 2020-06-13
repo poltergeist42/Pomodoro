@@ -2,7 +2,7 @@
 import React, { Component, Fragment } from 'react'
 
 // Import des fichiers JSON
-// import fetchingJson from '../Common/fetchingJson'
+import {fetchingJson} from '../Common/fetchingJson'
 
 // Import des composents du projet
 import Radio from '../component/Radio'
@@ -10,7 +10,7 @@ import Range from '../component/Range'
 import SubmitBtn from '../component/SubmitBtn'
 
 // import toolbox
-import { devLog } from '../Common/toolBox'
+// import { devLog } from '../Common/toolBox'
 
 export default class FormLampe extends Component {
     state = {
@@ -19,18 +19,18 @@ export default class FormLampe extends Component {
     }
 
     componentDidMount() {
-        fetch('http://localhost:3000/localCFG.json').then(resp => resp.json()).then(data => this.setState({ lampe: data.lampe }))
-        // devLog("formLampe - componentDidMount - state.lampe", this.state.lampe)
+        let fetchJson = fetchingJson()
+        fetchJson.then(data => this.setState({ lampe: data.lampe }))
     }
 
     componentDidUpdate() {
         this.handelDefaultChecked()
     }
 
-    handleSbmit = (event) => {
-        // event.preventDefault()
-        // devLog("handleSubmit - event", event)
-    }
+    // handleSbmit = (event) => {
+    //     // event.preventDefault()
+    //     // devLog("handleSubmit - event", event)
+    // }
 
     /* ********
     Cette méthode est appelée lors du chargement des composants "Radio". Elle permet de cocher les
@@ -55,13 +55,9 @@ export default class FormLampe extends Component {
         let items = [ ...this.state.items, itemProps ]
         // devLog("items", items)
         this.setState({ items })
-
     }
 
     render() {
-        const {lampe} = this.state
-        // devLog("lampe", lampe)
-        // devLog("type of lampe", typeof lampe.speed)
         return (
             <Fragment>
                 <h3 className="ml-5">Selection du mode d'éclairage</h3>
@@ -84,14 +80,14 @@ export default class FormLampe extends Component {
                             label="Intensité"
                             minVal="0"
                             maxVal="100"
-                            initValue={lampe.intesity} />
+                            initValue={this.state.lampe.intensity} />
 
                         <Range
                             name="rgeSpeed"
                             label="Vitesse"
                             minVal="0"
                             maxVal="100"
-                            initValue={lampe.speed} />
+                            initValue={this.state.lampe.speed} />
 
                         <br/>
 

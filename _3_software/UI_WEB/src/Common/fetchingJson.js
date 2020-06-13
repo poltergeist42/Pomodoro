@@ -1,20 +1,19 @@
-const fetchingJson = () => {
-    let cfgCommon
-    let cfgLampe
-    let cfgPomodoro
-    fetch('http://localhost:3000/localCFG.json').then((resp) => resp.json()).then(({ common, lampe, pomodoro }) => {
-        cfgCommon = common
-        cfgLampe = lampe
-        cfgPomodoro = pomodoro
-    })
+// import axios from 'axios'
 
-    console.log('cfgCommon', cfgCommon)
-    console.log('cfgLampe', cfgLampe)
-    console.log('cfgPomodoro', cfgPomodoro)
+//devTools
+// import { devLog } from './toolBox'
 
-    return {common: cfgCommon,
-            lampe: cfgLampe,
-            pomodoro: cfgPomodoro}
+const fetchingJson = async () => {
+    let resp = await fetch('/localCFG.json')
+    let dataJson = await resp.json();
+    return dataJson
+
 }
 
-export default fetchingJson
+// const fetchingWithAxios = async () => {
+//     let res = await axios.get('/localCFG.json')
+//     return res.data
+// }
+
+export { fetchingJson }
+

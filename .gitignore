@@ -9,8 +9,9 @@ creds.h
 ## [ Dossiers a ignorer ]
 _3_software/dev_Python/_3-1_test
 _3_software/dev_CPP/3-3_test
-_3_software/oldLibVers*/
-/node_modules
+
+_3_software/UI_WEB/node_modules
+_3_software/UI_WEB/build
 /.pnp
 .pnp.js
 

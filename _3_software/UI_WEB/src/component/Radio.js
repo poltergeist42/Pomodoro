@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import uniqid from 'uniqid'
 
 //import toolbox
-import {devLog} from '../Common/toolBox'
+// import {devLog} from '../Common/toolBox'
 
 export default class Radio extends Component {
     state = { itemID: uniqid('radio-') }

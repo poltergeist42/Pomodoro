@@ -7,8 +7,13 @@
     },
     "lampe":{
         "rdLampe": "fade",
-        "intesity": "75",
+        "intensity": "75",
         "speed": "25"
     },
-    "pomodoro":{}
+    "pomodoro":{
+        "workTime": 25,
+        "shortPause": 5,
+        "longPause": 20,
+        "cycle": 4
+    }
 }

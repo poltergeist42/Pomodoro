@@ -2,22 +2,19 @@ import React, { Component } from 'react'
 import uniqid from 'uniqid'
 
 // import toolbox
-import { devLog } from '../Common/toolBox'
+// import { devLog } from '../Common/toolBox'
 
 export default class Range extends Component {
     state = {
         itemID: uniqid('range-'),
-        rangeValue: ""
+        rangeValue: ''
     }
 
-    componentDidMount() {
-        const thisComponent = document.getElementById(this.state.itemID)
-        // thisComponent.value = "12"
-        devLog("initValue", typeof this.props.initValue)
-        thisComponent.value = this.props.initValue
-        devLog("thisComponent", thisComponent.value)
-        // this.setState({ rangeValue: thisComponent.value })
-        // this.setState({ rangeValue: this.props.initValue})
+    componentDidUpdate(){
+        if (!this.state.rangeValue){
+            let thisComponent = document.getElementById(this.state.itemID)
+            thisComponent.value = this.props.initValue
+        }
     }
 
 
@@ -40,7 +37,8 @@ export default class Range extends Component {
                         onChange={this.handleChangeRange}
                         min={this.props.minVal}
                         max={this.props.maxVal}
-                        id={this.state.itemID}>
+                        id={this.state.itemID}
+                    >
                     </input>
                 </div>
                 <div className="row">
@@ -48,7 +46,7 @@ export default class Range extends Component {
                         {this.props.minVal}
                     </div>
                     <div className="col d-flex justify-content-center">
-                        {this.state.rangeValue}
+                        {this.state.rangeValue ? this.state.rangeValue : this.props.initValue}
                     </div>
                     <div className="col d-flex justify-content-end">
                         {this.props.maxVal}
