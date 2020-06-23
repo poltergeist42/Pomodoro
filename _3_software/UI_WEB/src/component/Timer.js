@@ -4,7 +4,7 @@ import {fetchingJson} from '../Common/fetchingJson'
 import ActionButton from '../component/ActionButton'
 
 //Toolbox
-import { devLog } from '../Common/toolBox'
+// import { devLog } from '../Common/toolBox'
 
 
 export default class Timer extends Component {
@@ -19,12 +19,12 @@ export default class Timer extends Component {
     callback_clickParams = (e) => {
         this.props.cb_showModal()
         // this.setState({showModal: !this.state.showModal})
-        devLog("Timer.callback_clickParams", "click Params")
+        // devLog("Timer.callback_clickParams", "click Params")
     }
 
     render() {
         return (
-            <div className={`${!this.props.show ? 'd-bloc' : 'd-none'} container border border-success rounded my-3`} >
+            <div className={`container border border-success rounded my-3`} >
                 <div className="row">
                     <ActionButton
                         name="params"
