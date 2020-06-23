@@ -32,6 +32,8 @@ export default class FormParamsModal extends Component {
                                 name="params_work_time"
                                 type="number"
                                 get_item_id={this.callback_getCurrentItemValue}
+                                min="15"
+                                max=""
                             />
                         </Col>
                     </Row>
@@ -45,6 +47,8 @@ export default class FormParamsModal extends Component {
                                 name="paramsShortPause"
                                 type="number"
                                 get_item_id={this.callback_getCurrentItemValue}
+                                min="2"
+                                max="10"
                             />
                         </Col>
                     </Row>
@@ -58,6 +62,8 @@ export default class FormParamsModal extends Component {
                                 name="paramslongPause"
                                 type="number"
                                 get_item_id={this.callback_getCurrentItemValue}
+                                min=""
+                                max=""
                             />
                         </Col>
                     </Row>
@@ -71,6 +77,8 @@ export default class FormParamsModal extends Component {
                                 name="paramsCycle"
                                 type="number"
                                 get_item_id={this.callback_getCurrentItemValue}
+                                min="1"
+                                max=""
                             />
                         </Col>
                     </Row>
