@@ -2,7 +2,11 @@ import React, { Component } from 'react'
 
 export default class SubmitBtn extends Component {
     handleSubmit = (e) =>{
-        e.preventDefault()
+        console.log('clickSubmit')
+        let form = document.getElementById(this.props.formID)
+        if (form.isValid){
+            form.submit()
+        }
     }
 
     render() {
@@ -11,8 +15,7 @@ export default class SubmitBtn extends Component {
                 <button
                     className="btn btn-primary mx-auto"
                     type="submit"
-                    // onClick={this.handleSubmit}
-                    onSubmit={() => {return true}}
+                    onClick={this.handleSubmit}
                     >
                         {this.props.label}
                 </button>

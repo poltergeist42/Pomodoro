@@ -1,17 +1,21 @@
 import React, { Component } from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
+import uniqid from 'uniqid'
 
 import { InputField, InputLabel } from '../component/InputField'
 
 // import { devLog } from '../Common/toolBox'
 
 export default class FormParamsModal extends Component {
-    state = { itemID: [] }
+    state = {
+        itemID: [],
+        formID: uniqid("form-") 
+    }
 
-    // handleItemID = () => {
-    //     localItemID = [...this.state.itemID, uniqid()]
-    //     this.setState({ itemID: localItemID })
-    // }
+    componentDidMount(){
+        this.props.cb_getFormID(this.state.formID)
+        console.log('this.state.formID', this.state.formID)
+    }
 
     callback_getCurrentItemValue = (currentItem) => {
         let tmpItemState = { ...this.state.itemID, ...currentItem }
@@ -21,7 +25,7 @@ export default class FormParamsModal extends Component {
 
     render() {
         return (
-            <form className="form-group" name="FormParamsModal">
+            <form id={this.state.formID} className="form-group" name="FormParamsModal">
                 <Container>
                     <Row className="mb-1">
                         <Col>

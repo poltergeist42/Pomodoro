@@ -1,5 +1,6 @@
 // Import des bibliotheques React
 import React, { Component, Fragment } from 'react'
+import uniqid from 'uniqid'
 
 // Import des fichiers JSON
 import {fetchingJson} from '../Common/fetchingJson'
@@ -15,7 +16,8 @@ import SubmitBtn from '../component/SubmitBtn'
 export default class FormLampe extends Component {
     state = {
         items: [],
-        lampe: {}
+        lampe: {},
+        formID: uniqid("form-")
     }
 
     componentDidMount() {
@@ -61,7 +63,7 @@ export default class FormLampe extends Component {
         return (
             <Fragment>
                 <h3 className="ml-5">Selection du mode d'éclairage</h3>
-                <form className="form-group" onSubmit={this.handleSbmit}>
+                <form id={this.state.formID} className="form-group">
                     <div className="container mt-4 pl-5">
                         <Radio
                             name="rdLampe"

@@ -10,10 +10,8 @@ class InputField extends Component {
         let {min, max} = this.toggleMinAndLength()
         this.props.get_item_id(this.state.itemID)
         let thisItem = document.getElementById(this.state.itemID[this.props.name])
-        console.log('thisItem', thisItem)
         thisItem[min] = this.props.min
         thisItem[max] = this.props.max
-        console.log('thisItem.min', thisItem.min)
     }
 
     // handleChange = (e) => {

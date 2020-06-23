@@ -1,17 +1,16 @@
 import React, { Component } from 'react'
-import { Modal} from 'react-bootstrap'
+import { Modal } from 'react-bootstrap'
 
 // import BootstrapForm from './BootstrapForm'
 import FormPAramsModal from './FormParamsModal'
 import SubmitBtn from '../component/SubmitBtn'
 
 export default class ParamsModal extends Component {
-  // state = { workTimeValue: "", paramsShortPause: "", paramslongPause: "", paramsCycle: "" }
+  state = {formID: ""}
 
-  // handleSubmit = (e) => {
-  //   e.preventDefault()
-
-  // }
+  callback_getFormID = (formID) => {
+    this.setState({ formID })
+  }
 
   render() {
     // console.log('this.props.show', this.props.show)
@@ -22,7 +21,7 @@ export default class ParamsModal extends Component {
         size="lg"
         aria-labelledby="contained-modal-title-vcenter"
         // onHide={this.props.isclose}
-        show = {this.props.isclose}
+        show={this.props.isclose}
         onHide={this.props.cb_showModal}
         centered
       >
@@ -34,12 +33,12 @@ export default class ParamsModal extends Component {
           </Modal.Header>
           <Modal.Body >
             {/* <BootstrapForm /> */}
-            <FormPAramsModal/>
+            <FormPAramsModal cb_getFormID={this.callback_getFormID}/>
           </Modal.Body>
           <Modal.Footer>
             {/* <Button onClick={this.props.onHide}>Close</Button> */}
             {/* <Button variant="primary" type="submit">Valider</Button> */}
-            <SubmitBtn label="Valider" />
+            <SubmitBtn formID={this.state.formID} label="Valider" />
           </Modal.Footer>
         </div>
       </Modal>
